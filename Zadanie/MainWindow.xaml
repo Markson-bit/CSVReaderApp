@@ -1,0 +1,24 @@
+﻿<Window x:Class="Zadanie.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zadanie"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Border CornerRadius="50" BorderThickness="5" Background="#150f4a">
+        <Grid>
+            <TextBlock HorizontalAlignment="Left" Margin="40,34,0,0" TextWrapping="Wrap" Text="Current directory:" VerticalAlignment="Top" Width="184" FontFamily="Verdana" FontSize="20" Foreground="White"/>
+            <TextBlock x:Name="CurrentDirectory" HorizontalAlignment="Left" Margin="235,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="769" FontFamily="Verdana" FontSize="20" Foreground="White" />
+            <Button x:Name="ExitButton" Style="{StaticResource Windowbutton}" Content="X" HorizontalAlignment="Left" Margin="1200,14,0,0" VerticalAlignment="Top" Width="33" Click="ExitButton_Click" Height="31" />
+            <Button x:Name="MinimizeButton" Style="{StaticResource Windowbutton}" Content="-" HorizontalAlignment="Left" Margin="1153,14,0,0" VerticalAlignment="Top" Width="33" RenderTransformOrigin="-0.546,0.801" Click="MinimizeButton_Click" Height="31"/>
+            <Button x:Name="LocationButton" Style="{StaticResource Navigatebutton}" Content="Choose location" HorizontalAlignment="Left" Margin="35,112,0,0" VerticalAlignment="Top" Click="LocationButton_Click"/>
+            <DataGrid x:Name="dataGrid" Margin="292,84,37,44"/>
+        </Grid>
+    </Border>
+</Window>
