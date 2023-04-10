@@ -23,22 +23,16 @@ namespace Zadanie
     {
 
         public string FilePath { get; set; }
+        public string ItemsPath { get; set; }
 
-        public class Person
-        {
-            public string Id { get; set; }
-            public string Type { get; set; }
-            public string Date { get; set; }
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
-            public string City { get; set; }
-        }
+        private DataTable SecondDataTable;
 
         public MainWindow()
         {
             InitializeComponent();
-            // DataContext = new MainViewModel();
+            SecondDataTable = new DataTable();
             DataContext = this;
+            ItemsPath = AppDomain.CurrentDomain.BaseDirectory + @"/DocumentItems.csv";
         }
 
         private void MinimizeButton_Click (object sender, RoutedEventArgs e)
@@ -93,5 +87,52 @@ namespace Zadanie
             }
         }
 
+        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int id = 0;
+            if (dataGrid.SelectedItem != null)
+            {
+                DataRowView row = (DataRowView)dataGrid.SelectedItem;
+                id = Convert.ToInt32(row[0]);
+            }
+
+            CurrentRow.Text = id.ToString();
+
+            var itemsTable = new DataTable();
+            using (var streamReader = new StreamReader(ItemsPath))
+            {
+                var isFirstLine = true;
+                while (!streamReader.EndOfStream)
+                {
+                    var line = streamReader.ReadLine();
+                    if (string.IsNullOrWhiteSpace(line)) continue;
+
+                    var values = line.Split(';');
+                    if (isFirstLine)
+                    {
+                        isFirstLine = false;
+                        foreach (var value in values)
+                        {
+                            itemsTable.Columns.Add(new DataColumn(value.Trim()));
+                        }
+                    }
+                    else
+                    {
+                        var row = itemsTable.NewRow();
+                        if (Convert.ToInt32(values[0].Trim()) == id) // dodaj warunek
+                        {
+                            for (var i = 0; i < values.Length; i++)
+                            {
+                                row[i] = values[i].Trim();
+                            }
+                            itemsTable.Rows.Add(row);
+                        }
+                    }
+                }
+            }
+
+            detailsGrid.ItemsSource = itemsTable.DefaultView;
+
+        }
     }
 }
