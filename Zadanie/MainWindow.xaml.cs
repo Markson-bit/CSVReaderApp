@@ -17,8 +17,6 @@ using Microsoft.Win32;
 using System.IO;
 using System.Data.SQLite;
 using System.Xml.Linq;
-using CsvHelper;
-
 
 namespace Zadanie
 {
