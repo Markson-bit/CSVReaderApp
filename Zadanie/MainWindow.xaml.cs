@@ -76,8 +76,6 @@ namespace Zadanie
                 catch { };
             }
 
-            CurrentRow.Text = id.ToString();
-
             // Zmienna do przechowywania wartosci w formie tabelarycznej
             var itemsTable = new DataTable();
 
@@ -121,9 +119,6 @@ namespace Zadanie
         // Metoda obslugujaca przycisk Save
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            // Usuwanie zawartosci datagrid
-            ((DataView)dataGrid.ItemsSource).Table.Clear();
-
             var existingIds = new HashSet<string>();
             using (var connection = new SQLiteConnection($"Data Source={DatabasePath};Version=3;"))
             {
@@ -264,6 +259,30 @@ namespace Zadanie
             }
             // Zmiana zrodla tabeli 
             dataGrid.ItemsSource = dataTable.DefaultView;
+        }
+
+        // Metoda obslugujaca przycisk Clear data
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Usuwanie zawartosci datagrid
+            ((DataView)dataGrid.ItemsSource).Table.Clear();
+
+            // Polaczenie z baza danych i wykonanie polecenia Delete dla obu tabel
+            using (var connection = new SQLiteConnection($"Data Source={DatabasePath};Version=3;"))
+            {
+                connection.Open();
+
+                // Usunięcie wszystkich rekordów z tabeli Document
+                var command = new SQLiteCommand("DELETE FROM Document", connection);
+                command.ExecuteNonQuery();
+
+                // Usunięcie wszystkich rekordów z tabeli Items
+                command = new SQLiteCommand("DELETE FROM Item", connection);
+                command.ExecuteNonQuery();
+
+                connection.Close();
+            }
+
         }
     }
 }

@@ -19,10 +19,9 @@
             <DataGrid x:Name="dataGrid" Margin="292,104,531,24" SelectionChanged="dataGrid_SelectionChanged"/>
             <DataGrid x:Name="detailsGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="770,104,140,24"/>
             <TextBlock x:Name="CurrentDirectory" HorizontalAlignment="Left" Margin="256,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="803" FontFamily="Verdana" FontSize="20" Foreground="White" Height="56" />
-
-            <TextBlock x:Name="CurrentRow" HorizontalAlignment="Left" Margin="292,671,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="106" FontFamily="Verdana" FontSize="15" Foreground="White" Height="29" />
             <Button x:Name="SaveButton" Style="{StaticResource Navigatebutton}" Content="Save" HorizontalAlignment="Left" Margin="27,252,0,0" VerticalAlignment="Top" Height="62" Width="105" Click="SaveButton_Click"/>
             <Button x:Name="LoadButton" Style="{StaticResource Navigatebutton}" Content="Load" HorizontalAlignment="Left" Margin="162,252,0,0" VerticalAlignment="Top" Height="62" Width="105" Click="LoadButton_Click"/>
+            <Button x:Name="ClearButton" Style="{StaticResource Navigatebutton}" Content="Clear data" HorizontalAlignment="Left" Margin="80,408,0,0" VerticalAlignment="Top" Height="62" Width="144" Click="ClearButton_Click"/>
         </Grid>
     </Border>
 </Window>
