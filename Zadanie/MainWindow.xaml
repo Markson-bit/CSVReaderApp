@@ -13,15 +13,16 @@
         WindowStartupLocation="CenterScreen">
     <Border CornerRadius="50" BorderThickness="5" Background="#686b6e">
         <Grid>
-            <TextBlock HorizontalAlignment="Left" Margin="40,34,0,0" TextWrapping="Wrap" Text="Current directory:" VerticalAlignment="Top" Width="184" FontFamily="Verdana" FontSize="20" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="44,40,0,0" TextWrapping="Wrap" Text="Current directory:" VerticalAlignment="Top" Width="184" FontFamily="Verdana" FontSize="20" Foreground="White"/>
             <Button x:Name="ExitButton" Style="{StaticResource Windowbutton}" Content="X" HorizontalAlignment="Left" Margin="1200,14,0,0" VerticalAlignment="Top" Width="33" Click="ExitButton_Click" Height="31" />
             <Button x:Name="MinimizeButton" Style="{StaticResource Windowbutton}" Content="-" HorizontalAlignment="Left" Margin="1153,14,0,0" VerticalAlignment="Top" Width="33" RenderTransformOrigin="-0.546,0.801" Click="MinimizeButton_Click" Height="31"/>
-            <Button x:Name="LocationButton" Style="{StaticResource Navigatebutton}" Content="Choose location" HorizontalAlignment="Left" Margin="35,112,0,0" VerticalAlignment="Top" Click="LocationButton_Click"/>
-            <DataGrid x:Name="dataGrid" Margin="292,84,531,44" SelectionChanged="dataGrid_SelectionChanged"/>
-            <DataGrid x:Name="detailsGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="769,84,54,44"/>
-            <TextBlock x:Name="CurrentDirectory" HorizontalAlignment="Left" Margin="252,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="680" FontFamily="Verdana" FontSize="20" Foreground="White" Height="29" />
+            <DataGrid x:Name="dataGrid" Margin="292,104,531,24" SelectionChanged="dataGrid_SelectionChanged"/>
+            <DataGrid x:Name="detailsGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="770,104,140,24"/>
+            <TextBlock x:Name="CurrentDirectory" HorizontalAlignment="Left" Margin="256,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="803" FontFamily="Verdana" FontSize="20" Foreground="White" Height="56" />
 
-            <TextBlock x:Name="CurrentRow" HorizontalAlignment="Left" Margin="292,671,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="106" FontFamily="Verdana" FontSize="20" Foreground="White" Height="29" />
+            <TextBlock x:Name="CurrentRow" HorizontalAlignment="Left" Margin="292,671,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="106" FontFamily="Verdana" FontSize="15" Foreground="White" Height="29" />
+            <Button x:Name="SaveButton" Style="{StaticResource Navigatebutton}" Content="Save" HorizontalAlignment="Left" Margin="27,252,0,0" VerticalAlignment="Top" Height="62" Width="105" Click="SaveButton_Click"/>
+            <Button x:Name="LoadButton" Style="{StaticResource Navigatebutton}" Content="Load" HorizontalAlignment="Left" Margin="162,252,0,0" VerticalAlignment="Top" Height="62" Width="105" Click="LoadButton_Click"/>
         </Grid>
     </Border>
 </Window>
