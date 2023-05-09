@@ -10,7 +10,8 @@
 
 
 ### Ekran główny:
-![image](https://github.com/Markson-bit/ZadanieProgramisty/assets/88060437/ce7f6cd3-549d-4fcf-b6f9-2d7aab5d3cdb)
+![image](https://github.com/Markson-bit/ZadanieProgramisty/assets/88060437/ffdd482a-52a9-4b60-9f92-5ba0e6b1bd58)
+
 
 
 
