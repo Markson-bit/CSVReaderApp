@@ -18,10 +18,12 @@
             <Button x:Name="MinimizeButton" Style="{StaticResource Windowbutton}" Content="-" HorizontalAlignment="Left" Margin="1153,14,0,0" VerticalAlignment="Top" Width="33" RenderTransformOrigin="-0.546,0.801" Click="MinimizeButton_Click" Height="31"/>
             <DataGrid x:Name="dataGrid" Margin="292,104,531,24" SelectionChanged="dataGrid_SelectionChanged"/>
             <DataGrid x:Name="detailsGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="770,104,140,24"/>
-            <TextBlock x:Name="CurrentDirectory" HorizontalAlignment="Left" Margin="256,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="803" FontFamily="Verdana" FontSize="20" Foreground="White" Height="56" />
+            <TextBlock x:Name="CurrentDirectory" HorizontalAlignment="Left" Margin="245,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="803" FontFamily="Verdana" FontSize="12" Foreground="White" Height="35" />
             <Button x:Name="SaveButton" Style="{StaticResource Navigatebutton}" Content="Save" HorizontalAlignment="Left" Margin="27,252,0,0" VerticalAlignment="Top" Height="62" Width="105" Click="SaveButton_Click"/>
             <Button x:Name="LoadButton" Style="{StaticResource Navigatebutton}" Content="Load" HorizontalAlignment="Left" Margin="162,252,0,0" VerticalAlignment="Top" Height="62" Width="105" Click="LoadButton_Click"/>
             <Button x:Name="ClearButton" Style="{StaticResource Navigatebutton}" Content="Clear data" HorizontalAlignment="Left" Margin="80,408,0,0" VerticalAlignment="Top" Height="62" Width="144" Click="ClearButton_Click"/>
+            <TextBlock HorizontalAlignment="Left" Margin="454,80,0,0" TextWrapping="Wrap" Text="Documents:" VerticalAlignment="Top" Width="129" FontFamily="Verdana" FontSize="20" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Left" Margin="870,80,0,0" TextWrapping="Wrap" Text="Specific items:" VerticalAlignment="Top" Width="160" FontFamily="Verdana" FontSize="20" Foreground="White"/>
         </Grid>
     </Border>
 </Window>
