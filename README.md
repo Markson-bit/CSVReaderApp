@@ -5,12 +5,13 @@
   2. Dane są przechowywane w bazie danych przy użyciu SQLite. <br>  
   3. Z tego powodu należy zainstalować pakiet System.Data.SQLite <br>
   
-  ![image](https://github.com/Markson-bit/ZadanieProgramisty/assets/88060437/48742cc5-2208-44b2-95eb-2cbcefacba9a)<br>
+![image](https://github.com/Markson-bit/ZadanieProgramisty/assets/88060437/6d5b00ca-ba5f-468e-bc48-018e106937e1)
   
 
 
 ### Ekran główny:
-![image](https://github.com/Markson-bit/ZadanieProgramisty/assets/88060437/aeb5ff9e-d25d-4e92-a67c-9f738d08dcb1)
+![image](https://github.com/Markson-bit/ZadanieProgramisty/assets/88060437/ce7f6cd3-549d-4fcf-b6f9-2d7aab5d3cdb)
+
 
 
 
