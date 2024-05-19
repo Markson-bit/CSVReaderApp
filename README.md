@@ -1,4 +1,4 @@
-# Zadanie programisty
+CSV Reader
 
 ### Instalacja
   1. W pierwszej kolejności należy sklonować repozytorium. <br>
